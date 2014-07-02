@@ -10,7 +10,6 @@ import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
 import java.util.Set;
 
-
 @SupportedAnnotationTypes(value = "com.github.ingarabr.immutable.Immutable")
 public class ImmutableAnnotationProcessor extends AbstractProcessor {
 

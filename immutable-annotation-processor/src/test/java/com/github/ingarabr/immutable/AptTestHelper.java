@@ -32,4 +32,5 @@ public final class AptTestHelper {
                 .withErrorContaining(String.format(Messages.HEAD_ERROR_MSG_FORMAT,
                         clazz.getName()));
     }
+
 }

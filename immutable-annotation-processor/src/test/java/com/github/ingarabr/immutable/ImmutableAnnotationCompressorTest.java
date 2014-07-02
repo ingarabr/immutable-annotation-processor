@@ -2,11 +2,12 @@ package com.github.ingarabr.immutable;
 
 import com.github.ingarabr.immutable.test.AllCompileErrors;
 import com.github.ingarabr.immutable.test.DoesNotHaveFinalFieldCompileError;
-import com.github.ingarabr.immutable.test.DoesNotHavePrivateFieldCompileError;
-import com.github.ingarabr.immutable.test.WithSetterMethodCompileError;
 import com.github.ingarabr.immutable.test.DoesNotHaveFinalFieldCompiles;
+import com.github.ingarabr.immutable.test.DoesNotHavePrivateFieldCompileError;
 import com.github.ingarabr.immutable.test.DoesNotHavePrivateFieldCompiles;
+import com.github.ingarabr.immutable.test.WithSetterMethodCompileError;
 import com.github.ingarabr.immutable.test.WithSetterMethodCompiles;
+import com.github.ingarabr.immutable.test.SetterArgThatDoesNotMachFields;
 import org.junit.Test;
 
 import static com.github.ingarabr.immutable.AptTestHelper.shouldCompile;
@@ -54,6 +55,11 @@ public class ImmutableAnnotationCompressorTest {
     @Test
     public void shouldCompileWhenSetterMethodCheckIsDisabled() throws Exception {
         shouldCompile(WithSetterMethodCompiles.class);
+    }
+
+    @Test
+    public void shouldNotMatchSettersNotMachingJavaBeanConvention() throws Exception {
+        shouldCompile(SetterArgThatDoesNotMachFields.class);
     }
 
 }
