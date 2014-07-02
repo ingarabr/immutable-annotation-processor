@@ -2,6 +2,7 @@ package com.github.ingarabr.immutable.test;
 
 import com.github.ingarabr.immutable.Immutable;
 
+@SuppressWarnings("UnusedDeclaration")
 @Immutable(finalFields = false)
 public class WithSetterMethodCompileError {
     private int i;
